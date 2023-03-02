@@ -1,0 +1,156 @@
+.main_info
+{
+    height: 500px;
+    font-family: 'Oxygen';
+    background-image: url(../image/MAIN.jpg);
+    color: #FFFFFF;
+}
+
+.logo
+{
+    color: #FFFFFF;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.head_menu:link
+{
+    color: #FFFFFF;
+}
+
+.main_text
+{
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 51px;
+    letter-spacing: 2px;
+}
+
+.main_undertext
+{
+    color: rgba(255, 255, 255, 0.63);
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.main_button
+{
+    height: 44px;
+    background: #DD783F;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.head_menu
+{
+    color: #FFFFFF;
+}
+
+.submenu
+{
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    background: #FFFFFF;
+    color: #768088;
+}
+
+.sub_header
+{
+    font-family: 'Oxygen';
+    font-weight: 400;
+    font-size: 20px;
+    color: #2E2E2E;
+}
+
+.main_post_1
+{
+    color: #FFFFFFB2;
+    background-image: url(..//image/nothern.png) ;
+    height: 280px;
+    border-radius: 3px;
+    
+}
+.main_post_2
+{
+    color: #FFFFFFB2;
+    background-image: url(..//image/kid.png);
+    height: 280px;
+    border-radius: 3px;
+    
+}
+
+.mark
+{
+    height: 26px;
+    background: #DD783F;
+    font-family: 'Oxygen';
+    color: #FFFFFF;
+
+}
+
+.featured_headline
+{
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+
+
+.post_headline
+{
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #101315;
+}
+
+.post_discription
+{
+    color: #7A7A7A;
+    font-family: 'Oxygen';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.post_info
+{
+    background: #FCFCFC;
+    border-radius: 0px;
+}
+
+.post_auther
+{
+    color: #999999;
+    font-family: 'Oxygen';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 35px;
+}
+
+.post_data
+{
+    color: #999999;
+    font-family: 'Oxygen';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 35px;
+
+    
+}
+
+.footer_menu
+{
+    background-image: url(..//image/footer.png);
+    height: 89px;
+}

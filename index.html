@@ -3,112 +3,119 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Escape.</title>
+    <title>Escape</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Train+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <span>Esape.</span>
-    <nav>
-        <a title="Home Page" href="#">HOME</a>
-        <span>
-            <a title="Categories of posts" href="#">CATEGORIES</a>
-        </span>
-        <span>
-            <a title="About us" href="#">ABOUT</a>
-        </span>
-        <span>
-            <a title="Our contact" href="#">CONTACT</a>
-        </span>
-    </nav>
-    <h1>Let's do it together</h1>
-    <p>We travell the world in search of stories. Come along for the ride</p>
-    <button>View Latest posts</button>
-    <Section>
+    <div class="main_info">
+    <header>
+        <span class="logo">Esape.</span>
+        <nav class="head_menu">
+            <a title="Home Page" href="#" class="header_button_1">HOME</a>
+            <a title="Categories of posts" href="#" class="header_button_2">CATEGORIES</a>
+            <a title="About us" href="#" class="header_button_3">ABOUT</a>
+            <a title="Our contact" href="#" class="header_button_4">CONTACT</a>
+        </nav>
+    </header>
+    <h1 class="main_text">Let's do it together</h1>
+    <p class="main_undertext">We travell the world in search of stories. Come along for the ride</p>
+    <button class="main_button">View Latest posts</button>
+    </div>
+    <section class="submenu">
         <a title="Nature" href="#">Nature</a>
-        <span>
-            <a title="Photography" href="#">Photography</a>
-        </span>
-        <span>
-            <a title="Relaxiation" href="#">Relaxiation</a>
-        </span>
-        <span>
-            <a title="Vacation" href="#">Vacation</a>
-        </span>
-        <span>
-            <a title="Travell" href="#">Travell</a>
-        </span>
-        <span>
-            <a title="Adventury" href="#">Adventury</a>
-        </span>
+        <a title="Photography" href="#">Photography</a>
+        <a title="Relaxiation" href="#">Relaxiation</a>
+        <a title="Vacation" href="#">Vacation</a>
+        <a title="Travell" href="#">Travell</a>
+        <a title="Adventury" href="#">Adventury</a>
     </section>
-    <h2>Featured posts</h2>
-    <article>
-        <p>The Road Ahead</p>
-        <p>The road ahead might be paved - it might not be.</p>
-        <img src="Vogels.jpg" alt="Mat Vogels">
-        <span>Mat Vogels September 25, 2015</span>
+    <div class="posts_level">
+        <h2 class="sub_header">Featured posts</h2>
+        <article class="main_post_1">
+            <p class="featured_headline">The Road Ahead</p>
+            <p>The road ahead might be paved - it might not be.</p>
+            <img src="image/Vogels.png" alt="Mat Vogels">
+            <span>Mat Vogels September 25, 2015</span>
+        </article>
+        <article class="main_post_2">
+            <span class="mark">ADWENTURE</span>
+            <span class="featured_headline">From the down</span>
+            <p>Once a year, go someplace you've never been before</p>
+            <img src="image/Wong.png" alt="William Wong">
+            <span>William Wong September 25, 2015</span>
+        </article>
+    </div>
+    <h2 class="sub_header">More Recent</h2>
+    <article class="post_1">
+        <img src="image/balloons.jpg" alt="Воздушные шары">
+        <p class="post_headline">Still Standing Tall</p>
+        <p class="post_discription">Life begins at the end of your comfort zone.</p>
+        <div class="post_info">
+            <img src="image/Wong.png" alt="William Wong">
+            <span class="post_auther">William Wong</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <article>
-        <span>Adwenture from the down</span>
-        <p>Once a year, go someplace you've never been before</p>
-        <img src="Wong.jpg" alt="William Wong">
-        <span>William Wong September 25, 2015</span>
+    <article class="post_2">
+        <img src="image/bridge.png" alt="Мост">
+        <p class="post_headline">Sunny Side Up</p>
+        <p class="post_discription">No place is ever as bad as they tell you it’s going to be.</p>
+        <div class="post_info">
+            <img src="image/Vogels.png" alt="Mat Vogels">
+            <span class="post_auther">Mat Vogels</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <h2>More Recent</h2>
-    <article>
-        <img src="balloons.jpg" alt="Воздушные шары">
-        <span>Still Standing Tall</span>
-        <p>Life begins at the end of your comfort zone.</p>
-        <img src="Wong.jpg" alt="William Wong">
-        <span>William Wong September 25, 2015</span>
+    <article class="post_3">
+        <img src="image/river.png" alt="Река">
+        <p class="post_headline">Water Falls</p>
+        <p class="post_discription">We travel not to escape life, but for life not to escape us.</p>
+        <div class="post_info">
+            <img src="image/Vogels.png" alt="Mat Vogels">
+            <span class="post_auther">Mat Vogels</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <article>
-        <img src="bridge.png" alt="Мост">
-        <span>Sunny Side Up</span>
-        <p>No place is ever as bad as they tell you it’s going to be.</p>
-        <img src="Vogels.jpg" alt="Mat Vogels">
-        <span>Mat Vogels September 25, 2015</span>
+    <article class="post_4">
+        <img src="image/water.png" alt="Вода">
+        <p class="post_headline">Through the Mist<p>
+        <p class="post_discription">Travel makes you see what a tiny place you occupy in the world.</p>
+        <div class="post_info">
+            <img src="image/Wong.png" alt="William Wong">
+            <span class="post_auther">William Wong</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <article>
-        <img src="river.png" alt="Река">
-        <span>Water Falls</span>
-        <p>We travel not to escape life, but for life not to escape us.</p>
-        <img src="Vogels.jpg" alt="Mat Vogels">
-        <span>Mat Vogels September 25, 2015</span>
+    <article class="post_5">
+        <img src="image/fog.png" alt="Туман">
+        <p class="post_headline">Awaken Early</p>
+        <p class="post_discription">Not all those who wander are lost.</p>
+        <div class="post_info">
+            <img src="image/Vogels.png" alt="Mat Vogels">
+            <span class="post_auther">Mat Vogels</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <article>
-        <img src="water.png" alt="Вода">
-        <span>Through the Mist</span>
-        <p>Travel makes you see what a tiny place you occupy in the world.</p>
-        <img src="Wong.jpg" alt="William Wong">
-        <span>William Wong September 25, 2015</span>
+    <article class="post_6">
+        <img src="image/waterfall.png" alt="Водопад">
+        <p class="post_headline">Try it Always</p>
+        <p class="post_discription">The world is a book, and those who do not travel read only one page.</p>
+        <div class="post_info">
+            <img src="image/Vogels.png" alt="Mat Vogels">
+            <span class="post_auther">Mat Vogels</span>
+            <a class="post_data">September 25, 2015</a>
+        </div>
     </article>
-    <article>
-        <img src="fog.png" alt="Туман">
-        <span>Awaken Early</span>
-        <p>Not all those who wander are lost.</p>
-        <img src="Vogels.jpg" alt="Mat Vogels">
-        <span>Mat Vogels September 25, 2015</span>
-    </article>
-    <article>
-        <img src="waterfall.png" alt="Водопад">
-        <span>Try it Always</span>
-        <p>The world is a book, and those who do not travel read only one page.</p>
-        <img src="Vogels.jpg" alt="Mat Vogels">
-        <span>Mat Vogels September 25, 2015</span>
-    </article>
-    <footer>
-        <span>Esape.</span>
-        <section>
-            <a title="Home Page" href="#">HOME</a>
-            <span>
-                <a title="Categories of posts" href="#">CATEGORIES</a>
-            </span>
-            <span>
-                <a title="About us" href="#">ABOUT</a>
-            </span>
-            <span>
-                <a title="Our contact" href="#">CONTACT</a>
-            </span>
+    <footer class="footer_menu">
+        <span class="logo">Esape.</span>
+        <section class="">
+            <a title="Home Page" href="#" class="">HOME</a>
+            <a title="Categories of posts" href="#" class="">CATEGORIES</a>
+            <a title="About us" href="#" class="">ABOUT</a>
+            <a title="Our contact" href="#" class="">CONTACT</a>
         </section>
     </footer>
 </body>
