@@ -3,21 +3,21 @@
     height: 500px;
     font-family: 'Oxygen';
     background-image: url(../image/MAIN.jpg);
-    color: #FFFFFF;
+    color: #2E2E2E;
 }
 
 .logo
 {
-    color: #FFFFFF;
+    color: #2E2E2E;
     font-family: 'Lora';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
 }
 
-.head_menu:link
+.head_menu
 {
-    color: #FFFFFF;
+    color: #2E2E2E;
 }
 
 .main_text
@@ -27,11 +27,12 @@
     font-size: 50px;
     line-height: 51px;
     letter-spacing: 2px;
+    color: #2E2E2E;
 }
 
 .main_undertext
 {
-    color: rgba(255, 255, 255, 0.63);
+    color: #2E2E2EA1;
     font-weight: 400;
     font-size: 17px;
 }
@@ -86,72 +87,26 @@
     
 }
 
-.mark
+
+.post_text
 {
-    height: 26px;
-    background: #DD783F;
-    font-family: 'Oxygen';
-    color: #FFFFFF;
-
-}
-
-.featured_headline
-{
-    font-family: 'Lora';
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
-
-
-
-.post_headline
-{
-    font-family: 'Lora';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #101315;
-}
-
-.post_discription
-{
-    color: #7A7A7A;
     font-family: 'Oxygen';
     font-weight: 400;
-    font-size: 13px;
-    line-height: 19px;
-}
-
-.post_info
-{
-    background: #FCFCFC;
-    border-radius: 0px;
-}
-
-.post_auther
-{
-    color: #999999;
-    font-family: 'Oxygen';
-    font-weight: 400;
-    font-size: 11px;
+    font-size: 24px;
     line-height: 35px;
-}
-
-.post_data
-{
-    color: #999999;
-    font-family: 'Oxygen';
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 35px;
-
-    
 }
 
 .footer_menu
 {
     background-image: url(..//image/footer.png);
     height: 89px;
+}
+
+.logo_under
+{
+    color: #FFFFFF;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
 }
