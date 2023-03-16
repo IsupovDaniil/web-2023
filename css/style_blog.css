@@ -1,12 +1,4 @@
-.main_info
-{
-    height: 500px;
-    font-family: 'Oxygen';
-    background-image: url(../image/MAIN.jpg);
-    color: #2E2E2E;
-}
-
-.logo
+.head__logo
 {
     color: #2E2E2E;
     font-family: 'Lora';
@@ -15,12 +7,12 @@
     font-size: 26px;
 }
 
-.head_menu
+.head-menu
 {
     color: #2E2E2E;
 }
 
-.main_text
+.top-block__title
 {
     font-family: 'Lora';
     font-weight: 400;
@@ -30,65 +22,44 @@
     color: #2E2E2E;
 }
 
-.main_undertext
+.top-block__subtitle
 {
     color: #2E2E2EA1;
     font-weight: 400;
     font-size: 17px;
 }
 
-.main_button
+a:link 
 {
-    height: 44px;
-    background: #DD783F;
-    border-radius: 3px;
-    border: none;
-    color: #FFFFFF;
-}
-
-.head_menu:link
-{
-    color: #FFFFFF;
-
-}
-
-.submenu
-{
-    font-family: 'Lora';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    background: #FFFFFF;
-    color: #768088;
-}
-
-.sub_header
-{
-    font-family: 'Oxygen';
-    font-weight: 400;
-    font-size: 20px;
     color: #2E2E2E;
+    text-decoration: none;
 }
-
-.main_post_1
+  
+a:visited 
 {
-    color: #FFFFFFB2;
-    background-image: url(..//image/nothern.png) ;
-    height: 280px;
-    border-radius: 3px;
-    
+    color: #2E2E2E;
+    text-decoration: none;
 }
-.main_post_2
+  
+a:focus 
 {
-    color: #FFFFFFB2;
-    background-image: url(..//image/kid.png);
-    height: 280px;
-    border-radius: 3px;
-    
+    color: #2E2E2E;
+    text-decoration: none;
+}
+  
+a:hover 
+{
+    color: #2E2E2E;
+    text-decoration: none;
+}
+  
+a:active 
+{
+    color: #2E2E2E;
+    text-decoration: none;
 }
 
-
-.post_text
+.post
 {
     font-family: 'Oxygen';
     font-weight: 400;
@@ -96,17 +67,29 @@
     line-height: 35px;
 }
 
-.footer_menu
+.foot
 {
-    background-image: url(..//image/footer.png);
+    background: url(../image/footer.png) no-repeat;
+    color: #FFFFFF;
+    background-position: center;
+    background-size: 100%;
+    margin: 0;
     height: 89px;
+    font-family: 'Oxygen';
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 27px;
+    padding-right: 250px;
+    padding-left: 918px;
 }
 
-.logo_under
+.foot__logo
 {
     color: #FFFFFF;
     font-family: 'Lora';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
+    display: flex;
 }
