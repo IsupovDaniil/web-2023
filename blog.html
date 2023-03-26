@@ -13,16 +13,16 @@
     <header class="head">
         <a class="head__logo">Esape.</a>
         <nav class="head-menu">
-            <a title="Home Page" href="#" class="head-menu__button">HOME</a>
-            <a title="Categories of posts" href="#" class="head-menu__button">CATEGORIES</a>
-            <a title="About us" href="#" class="head-menu__button">ABOUT</a>
-            <a title="Our contact" href="#" class="head-menu__button">CONTACT</a>
+            <a title="Home Page" href="#" class="head-menu__link">HOME</a>
+            <a title="Categories of posts" href="#" class="head-menu__link">CATEGORIES</a>
+            <a title="About us" href="#" class="head-menu__link">ABOUT</a>
+            <a title="Our contact" href="#" class="head-menu__link">CONTACT</a>
         </nav>
     </header>
     <div class="top-block">
         <h1 class="top-block__title">The Road Ahead</h1>
         <h2 class="top-block__subtitle">The road ahead might be paved - it might not be.</h2>
-        <img src="image/nothern.png" alt="Северное сияние">
+        <img src="image/nothern.png" alt="Северное сияние" class="top-block__nothern">
     </div>
     <article class="post">
         <p>Dark spruce forest frowned on either side the frozen waterway. The trees had been stripped by a recent wind
@@ -61,15 +61,24 @@
             bent on colossal adventure, pitting themselves against the might of a world as remote and alien and
             pulseless as the abysses of space.</p>
     </article>
-    <footer class="foot">
-        <span class="foot__logo">Esape.</span>
-        <section class="foot-menu">
-            <a title="Home Page" href="#" class="foot-menu__element">HOME</a>
-            <a title="Categories of posts" href="#" class="foot-menu__element">CATEGORIES</a>
-            <a title="About us" href="#" class="foot-menu__element">ABOUT</a>
-            <a title="Our contact" href="#" class="foot-menu__element">CONTACT</a>
+    <div class="basement">
+        <div class="basement-feedback">
+            <h3 class="basement-feedback-title">Stay in Touch</h3>
+            <form class="basement-feedback-form"> 
+                <input value="Submit" class="basement-feedback-form__field">
+                <input type="submit" value="Submit" class="basement-feedback-form__button">
+            </form>
+        </div>
+    <footer class="basement-foot">
+        <span class="basement-foot__logo">Esape.</span>
+        <section class="basement-foot-menu">
+            <a title="Home Page" href="#" class="basement-foot-menu__link">HOME</a>
+            <a title="Categories of posts" href="#" class="basement-foot-menu__link">CATEGORIES</a>
+            <a title="About us" href="#" class="basement-foot-menu__link">ABOUT</a>
+            <a title="Our contact" href="#" class="basement-foot-menu__link">CONTACT</a>
         </section>
     </footer>
+    </div>
 </body>
 
 </html>
