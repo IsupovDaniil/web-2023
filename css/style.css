@@ -10,7 +10,6 @@ body
     position: absolute;
     align-items: center;
     margin-top: 20px;
-    gap: 491px;
     justify-content: space-evenly;
     width: 100%;
 
@@ -439,7 +438,6 @@ body
     background: rgba(35, 47, 56, 0.6);
     height: 89px;
     align-items: center;
-    gap: 491px;
     justify-content: space-evenly;
     width: 100%;
 
