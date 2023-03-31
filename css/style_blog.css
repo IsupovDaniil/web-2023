@@ -1,8 +1,16 @@
+body
+{
+    margin: 0px;
+}
+
 .head
 {
     display: flex;
-    right: 25%;
-    left: 25%;
+    justify-content: space-around;
+    gap: 491px;
+    align-items: center;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 
 .head__logo
@@ -11,9 +19,7 @@
     font-family: 'Lora';
     font-style: normal;
     font-size: 26px;
-    margin-right: 491px;
-    margin-left: calc(50% - 470px);
-    margin-top: 20px;
+
 }
 
 .head-menu
@@ -24,7 +30,9 @@
     height: 40px;
     margin-top: 33px;
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;
+    gap: 40px;
+
 }
 .head-menu a
 {
@@ -32,11 +40,6 @@
     text-decoration: none;
 }
 
-.head-menu__link
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 .top-block__title
 {
@@ -70,6 +73,11 @@
 
 .post
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-family: 'Oxygen';
     font-weight: 400;
     font-size: 24px;
@@ -78,6 +86,7 @@
     margin-right: 25%;
     margin-top: 140px;
     margin-bottom: 140px;
+    padding: 0px;
     
 }
 
@@ -154,7 +163,8 @@
 .basement-foot
 {
     display: flex;
-    left: calc(50% - 250px);
+    margin-right: 25%;
+    margin-left: 25%;
     margin: 0;
     height: 89px;
     font-family: 'Oxygen';
@@ -192,6 +202,6 @@
     font-style: normal;
     font-size: 26px;
     margin-right: 491px;
-    margin-left: calc(50% - 470px);
+    margin-left: 25%;
     margin-top: 20px;
 }

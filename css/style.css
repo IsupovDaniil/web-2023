@@ -1,14 +1,19 @@
 body
 {
-    margin: 0px;
+    margin: 0;
+    background: #F7F7F7;
 }
 
 .head
 {
     display: flex;
     position: absolute;
-    right: 25%;
-    left: 25%;
+    align-items: center;
+    margin-top: 20px;
+    gap: 491px;
+    justify-content: space-evenly;
+    width: 100%;
+
 }
 
 .head__logo
@@ -17,9 +22,7 @@ body
     font-family: 'Lora';
     font-style: normal;
     font-size: 26px;
-    margin-right: 491px;
-    margin-left: calc(50% - 470px);
-    margin-top: 20px;
+    justify-content: flex-start;
 }
 
 .head-menu
@@ -27,10 +30,10 @@ body
     font-family: 'Oxygen';
     font-size: 12px;
     color: #FFFFFF;
-    height: 40px;
-    margin-top: 33px;
     display: flex;
-    justify-content: stretch;
+    gap:40px;
+    justify-content: flex-end;
+    
 }
 .head-menu a
 {
@@ -38,11 +41,6 @@ body
     text-decoration: none;
 }
 
-.head-menu__link
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .top-block
 {
     height: 500px;
@@ -51,8 +49,6 @@ body
     color: #FFFFFF;
     background-position: center;
     background-size: 100%;
-    right: 25%;
-    left: 25%;
 
 }
 
@@ -83,7 +79,14 @@ body
     margin-top: 20px;
 }
 
-.top-block__button
+.top-block-button
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.top-block-button__text
 {
     height: 44px;
     width: 167px;
@@ -92,8 +95,9 @@ body
     border: none;
     color: #FFFFFF;
     margin-top: 31px;
-    margin-left: calc(50% - (167px / 2));
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -116,8 +120,9 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background: #F7F7F7;    
+    align-items: center; 
+    margin-top: 60px;
+    
 }
 
 .featured-posts
@@ -126,9 +131,9 @@ body
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
-    width: 50%;
-    left: 25%;
-
+    gap: 20px;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 
 .featured-posts__title
@@ -138,7 +143,6 @@ body
     font-size: 20px;
     text-align: center;
     margin: 0;
-    padding-top: 60px;
     height: 27px;
     margin-bottom: 40px;
     letter-spacing: 2px;
@@ -248,16 +252,18 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #F7F7F7;
+    margin-top: 60px;
 }
 
 .most-recent-posts
 {
     display: flex;
     flex-wrap:wrap;
-    width: 50%;
     padding-bottom: 108px;
     justify-content: space-around;
+    gap: 25px;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 
 .most-recent-posts__title
@@ -267,7 +273,6 @@ body
     font-size: 20px;
     text-align: center;
     margin: 0;
-    padding-top: 60px;
     height: 27px;
     padding-bottom: 15px;
     letter-spacing: 2px;
@@ -280,7 +285,6 @@ body
 {
     height: 291px;
     width: 296px;;
-    background: #F7F7F7;
     margin-top: 25px;
     margin-bottom: 25px;
 
@@ -321,6 +325,7 @@ body
 .most-recent-post-info
 {   display: flex;
     align-items: center;
+    justify-content: space-evenly;
     background: #FCFCFC;
     border-radius: 0px;
     height: 48px;
@@ -357,11 +362,11 @@ body
 
 .basement
 {
-    background-color: #F7F7F7;
     background: url(../image/footerbackground.png) no-repeat;
     background-position: center;
     background-size: 100%;
     height:378px;
+    
 }
 
 .basement-foot-feedback
@@ -411,6 +416,7 @@ body
     width: 375px;
     border-radius: 3px 0px 0px 3px;
     border: none;
+    padding-left: 35px;
 
 }
 
@@ -428,12 +434,16 @@ body
 .basement-foot
 {
     display: flex;
-    left: calc(50% - 250px);
     margin: 0;
-    height: 89px;
     font-family: 'Oxygen';
     background: rgba(35, 47, 56, 0.6);
-    margin-bottom: 0px;
+    height: 89px;
+    align-items: center;
+    gap: 491px;
+    justify-content: space-evenly;
+    width: 100%;
+
+
 }
 
 .basement-foot-menu
@@ -442,9 +452,12 @@ body
     font-size: 12px;
     color: #FFFFFF;
     height: 40px;
-    margin-top: 33px;
     display: flex;
-    justify-content: stretch;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+ 
+    
 }
 
 .basement-foot-menu a
@@ -453,11 +466,6 @@ body
     text-decoration: none;
 }
 
-.basement-foot-menu__link
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 .basement-foot__logo
 {
@@ -465,7 +473,4 @@ body
     font-family: 'Lora';
     font-style: normal;
     font-size: 26px;
-    margin-right: 491px;
-    margin-left: calc(50% - 470px);
-    margin-top: 20px;
 }
