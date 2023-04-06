@@ -1,6 +1,8 @@
 body
 {
     margin: 0px;
+    background: #F7F7F7;
+    
 }
 
 .head
@@ -76,7 +78,7 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     font-family: 'Oxygen';
     font-weight: 400;
     font-size: 24px;
@@ -86,6 +88,7 @@ body
     margin-top: 140px;
     margin-bottom: 140px;
     padding: 0px;
+    
     
 }
 
@@ -100,6 +103,10 @@ body
     background-position: center;
     background-size: 100%;
     height:378px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -121,12 +128,11 @@ body
     color: #EFEFEF;
     font-weight: 400;
     font-size: 25px;
-    line-height: 30px;
     letter-spacing: 2px;
     text-align: center; 
     margin: 0px;
     padding-top: 80px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     text-decoration-line: underline;
     text-decoration-color:  #DEDEDE;
     text-underline-offset: 16px;
@@ -134,14 +140,11 @@ body
 
 .basement-feedback-form
 {
-    display: flex;
     padding: 0px;
-    border: 0px;
     height: 50px;
     border: none;
-    padding-bottom: 90px;
+    margin-bottom: 90px;
     display: flex;
-    justify-content: center;
 
 }
 
@@ -189,6 +192,7 @@ body
     align-items: center;
     justify-content: flex-end;
     gap: 40px;
+    
  
     
 }
