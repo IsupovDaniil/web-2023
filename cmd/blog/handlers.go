@@ -1,34 +1,48 @@
 package main
 
 import (
+	"database/sql"
+	"html/template"
 	"log"
 	"net/http"
-	"text/template"
+	"strconv"
 
+	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
 )
 
 type indexPageData struct {
+	Title         string
 	FeaturedPosts []featuredPostData
 	MostRecent    []mostRecentPostData
 }
 
 type featuredPostData struct {
-	Title       string `db:"title"`
-	Subtitle    string `db:"subtitle"`
-	PublishDate string `db:"publish_date"`
-	Author      string `db:"author"`
-	ImgAuthor   string `db:"author_url"`
-	ImgModifier string `db:"image_url"`
-}
-
-type mostRecentPostData struct {
+	PostID      string `db:"post_id"`
 	Title       string `db:"title"`
 	Subtitle    string `db:"subtitle"`
 	PublishDate string `db:"publish_date"`
 	Author      string `db:"author"`
 	ImgAuthor   string `db:"author_url"`
 	ImgPost     string `db:"image_url"`
+	ImgMod      string `db:"image_mod"`
+}
+
+type mostRecentPostData struct {
+	PostID      string `db:"post_id"`
+	Title       string `db:"title"`
+	Subtitle    string `db:"subtitle"`
+	PublishDate string `db:"publish_date"`
+	Author      string `db:"author"`
+	ImgAuthor   string `db:"author_url"`
+	ImgPost     string `db:"image_url"`
+}
+
+type postData struct {
+	Title    string `db:"title"`
+	Subtitle string `db:"subtitle"`
+	ImgPost  string `db:"image_url"`
+	Content  string `db:"content"`
 }
 
 func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
@@ -49,12 +63,13 @@ func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 
 		ts, err := template.ParseFiles("pages/index.html")
 		if err != nil {
-			http.Error(w, "Internal Server Error", 500)
-			log.Println(err)
+			http.Error(w, "Internal server error", 500)
+			log.Println(err.Error())
 			return
 		}
 
 		data := indexPageData{
+			Title:         "Escape.",
 			FeaturedPosts: FeaturedPostsData,
 			MostRecent:    MostRecentPostsData,
 		}
@@ -62,7 +77,7 @@ func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 		err = ts.Execute(w, data)
 		if err != nil {
 			http.Error(w, "Internal Server Error", 500)
-			log.Println(err)
+			log.Println(err.Error())
 			return
 		}
 
@@ -70,31 +85,59 @@ func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func post(w http.ResponseWriter, r *http.Request) {
-	ts, err := template.ParseFiles("pages/post.html")
-	if err != nil {
-		http.Error(w, "Internal Server Error", 500)
-		log.Println(err.Error())
-		return
-	}
+func post(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+		postIDStr := mux.Vars(r)["postID"]
 
-	err = ts.Execute(w, nil)
-	if err != nil {
-		http.Error(w, "Internal Server Error", 500)
-		log.Println(err.Error())
-		return
+		postID, err := strconv.Atoi(postIDStr)
+		if err != nil {
+			http.Error(w, "Internal post id", http.StatusForbidden)
+			log.Println(err.Error())
+			return
+		}
+
+		post, err := postByID(db, postID)
+		if err != nil {
+			if err == sql.ErrNoRows {
+				http.Error(w, "Post not found", 404)
+				log.Println(err.Error())
+				return
+			}
+
+			http.Error(w, "Internal server error", 500)
+			log.Println(err.Error())
+			return
+		}
+
+		ts, err := template.ParseFiles("pages/post.html")
+		if err != nil {
+			http.Error(w, "Internal server error", 500)
+			log.Println(err.Error())
+			return
+		}
+
+		err = ts.Execute(w, post)
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err.Error())
+			return
+		}
+
+		log.Println("Request completed successfully")
 	}
 }
 
 func featuredPosts(db *sqlx.DB) ([]featuredPostData, error) {
 	const query = `
 		SELECT
-			title,
+			post_id,
+			title, 
 			subtitle,
-			author,
+			image_url,
+			author, 
 			author_url,
 			publish_date,
-			image_url
+			image_mod 
 		FROM
 			post
 		WHERE featured = 1
@@ -112,16 +155,18 @@ func featuredPosts(db *sqlx.DB) ([]featuredPostData, error) {
 
 func mostRecentPosts(db *sqlx.DB) ([]mostRecentPostData, error) {
 	const query = `
-		SELECT
-			title,
-			subtitle,
-			author,
-			author_url,
-			publish_date,
-			image_url
-		FROM
-			post
-		WHERE featured = 0
+	SELECT
+		post_id,
+		title, 
+		subtitle,
+		image_url,
+		author, 
+		author_url,
+		publish_date
+	FROM
+		post
+	WHERE 
+		featured = 0
 	`
 
 	var posts []mostRecentPostData
@@ -132,4 +177,27 @@ func mostRecentPosts(db *sqlx.DB) ([]mostRecentPostData, error) {
 	}
 
 	return posts, nil
+}
+
+func postByID(db *sqlx.DB, postID int) (postData, error) {
+	const query = `
+	SELECT
+		title,
+		subtitle,
+		content,
+		image_url
+	FROM
+		` + "`post`" + `
+	WHERE
+		  post_id = ?
+	`
+
+	var post postData
+
+	err := db.Get(&post, query, postID)
+	if err != nil {
+		return postData{}, err
+	}
+
+	return post, nil
 }

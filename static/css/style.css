@@ -121,6 +121,7 @@ body
     
 }
 
+
 .featured-posts
 {
     font-family: 'Oxygen';
@@ -157,18 +158,18 @@ body
     padding-top: 147px; 
     padding-left: 20px;
     padding-bottom: 30px;
+    text-decoration: none; 
 }
-
 
 .featured-post__the-road-ahead
 {
-    background: url(..//image/nothern_feature.png) no-repeat;
+    background: url(/static/image/nothern_feature.png) no-repeat;
     /* background: url(..//image/nothernFeature.png) no-repeat; */
 }
 
 .featured-post__from-the-down
 {
-    background: url(..//image/kid.png) no-repeat;
+    background: url(/static/image/kid.png) no-repeat;
 }
 
 
@@ -182,6 +183,7 @@ body
     color: #FFFFFF;
 
 }
+
 
 .featured-post-subdeclaration
 {
@@ -268,6 +270,12 @@ body
     height: 291px;
     width: 296px;;
 
+}
+
+.most-recent-post a 
+{ 
+    color: #768088; 
+    text-decoration: none;
 }
 
 .most-recent-post__balloons

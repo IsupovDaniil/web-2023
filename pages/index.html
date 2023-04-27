@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Escape</title>
-    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Train+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <style>
+    a { 
+        text-decoration: nonne;
+       } 
+    </style>
 </head>
 
 <body>
@@ -14,7 +19,7 @@
         <div class="head">
             <span class="head__logo">Escape.</span>
             <nav class="head-menu">
-                <a title="Home Page" href="#" class="head-menu__link" >HOME</a>
+                <a title="Home Page" href="/home" class="head-menu__link" >HOME</a>
                 <a title="Categories of posts" href="#" class="head-menu__link">CATEGORIES</a>
                 <a title="About us" href="#" class="head-menu__link">ABOUT</a>
                 <a title="Our contact" href="#" class="head-menu__link">CONTACT</a>
@@ -36,17 +41,17 @@
     </div> 
     <div class="featured"> 
         <h2 class="featured-posts__title">Featured posts</h2>
-        <div class="featured-posts">
+        <div  class="featured-posts">
             {{ range .FeaturedPosts }}
-            <article class="featured-post {{ .ImgModifier }}">
-                    <h2 class="featured-post__subtitle">{{ .Title }}</h2>
-                    <p class="featured-post__description">{{ .Subtitle }}</p>
-                    <div class="featured-post-subdeclaration">
-                        <img src="{{ .ImgAuthor }}" alt="{{ .Author }}" class="featured-post__author-photo">
-                        <span class="featured-post__author">{{ .Author }}</span>
-                        <span class="featured-post__data">{{ .PublishDate }}</span>  
-                    </div> 
-            </article>
+            <a href="/post/{{ .PostID }}" class="featured-post {{ .ImgMod }}">
+                <h2 class="featured-post__subtitle">{{ .Title }}</h2>
+                <p class="featured-post__description">{{ .Subtitle }}</p>
+                <div class="featured-post-subdeclaration">
+                    <img src="{{ .ImgAuthor }}" alt="{{ .Author }}" class="featured-post__author-photo">
+                    <span class="featured-post__author">{{ .Author }}</span>
+                    <span class="featured-post__data">{{ .PublishDate }}</span>  
+                </div> 
+            </a>
             {{ end }}
         </div>
     </div>
@@ -54,18 +59,18 @@
         <h2 class="most-recent-posts__title">Most Recent</h2>
         <div class="most-recent-posts">
             {{ range .MostRecent }}
-            <article class="most-recent-post">
-            <img src="{{ .ImgPost }}" alt="{{ .Title }}" class="most-recent-post__baloons">
+            <a  href="/post/{{ .PostID }}" class="most-recent-post">
+                <img src="{{ .ImgPost }}" alt="{{ .Title }}" class="most-recent-post__baloons">
                 <div class="most-recent-post-caption">
                     <h3 class="most-recent-post-caption__title">{{ .Title }}</h3>
                     <p class="most-recent-post-caption__description">{{ .Subtitle }}</p>
                 </div>
                 <div class="most-recent-post-info">
                     <img src="{{ .ImgAuthor }}" alt="{{ .Author }}" class="most-recent-post__author-photo">
-                        <span class="most-recent-post-info__author">{{ .Author }}</span>
-                        <span class="most-recent-post-info__data">{{ .PublishDate }}</span>
+                    <span class="most-recent-post-info__author">{{ .Author }}</span>
+                    <span class="most-recent-post-info__data">{{ .PublishDate }}</span>
                 </div>
-            </article>
+            </a>
             {{ end }}        
         </div>
     </div>
