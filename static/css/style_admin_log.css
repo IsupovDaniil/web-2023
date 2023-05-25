@@ -1,0 +1,127 @@
+body
+{
+    background: url(../image/admin_fon.png) no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.logo
+{
+    color: #FFFFFF;
+    margin-top: 20%;
+}
+
+.logo-header
+{
+    width: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-header__main
+{
+    font-family: 'Lora'; 
+    font-size: 46px;
+    line-height: 46px;
+    margin: 0;
+}
+
+.logo-header__add
+{
+    font-family: 'Oxygen';       
+    font-size: 25px;
+    margin: 0;
+}
+
+.logo-subheader
+{
+    font-family: 'Oxygen';  
+    font-size: 17px;  
+}
+
+
+.log-menu
+{
+    width: 480px;
+    height: 560px;
+    background-color: white;
+    border-radius: 3px;
+    padding-top: 56px;
+    padding-left: 40px;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.log-menu__header
+{
+    color: #000000;
+    font-family: 'Lora';
+    font-style: normal;
+    font-size: 34px;
+}
+
+.log-menu__subheader
+{
+    color: #7A7A7A;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-size: 12px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.log-menu-password
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.log-menu__input
+{
+    width: 400px;
+    height: 40px;
+    background: #F7F7F7;
+    border-width: 0 0 1px 0;
+    border-color: #EAEAEA;
+    padding-left: 5px;
+}
+
+.log-menu-password
+{
+    width: 400px;
+    height: 40px;
+    background: #F7F7F7;
+    border-width: 0 0 1px 0;
+    border-color: #EAEAEA;
+    padding-left: 5px;   
+}
+
+.log-menu__input-password
+{
+    display: flex;
+    align-items: center;
+}
+
+.log-menu__input-password-eye 
+{
+    position: absolute;
+    top: 575px; 
+    right: 300px;
+}
+
+
+.log-menu__button
+{
+    font-family: 'Oxygen';
+    color: #FFFFFF;
+    font-size: 15px;
+    width: 93px;
+    height: 48px;
+    background: #DD783F;
+    border: none;
+    border-radius: 3px;
+    margin-top: 40px;
+}

@@ -10,8 +10,6 @@ body
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-
-
 }
 
 .head__logo
@@ -270,12 +268,6 @@ body
     height: 291px;
     width: 296px;;
 
-}
-
-.most-recent-post a 
-{ 
-    color: #768088; 
-    text-decoration: none;
 }
 
 .most-recent-post__balloons

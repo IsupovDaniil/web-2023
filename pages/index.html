@@ -7,11 +7,6 @@
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Train+One&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <style>
-    a { 
-        text-decoration: nonne;
-       } 
-    </style>
 </head>
 
 <body>
@@ -59,7 +54,7 @@
         <h2 class="most-recent-posts__title">Most Recent</h2>
         <div class="most-recent-posts">
             {{ range .MostRecent }}
-            <a  href="/post/{{ .PostID }}" class="most-recent-post">
+            <a style="text-decoration: none"; href="/post/{{ .PostID }}" class="most-recent-post">
                 <img src="{{ .ImgPost }}" alt="{{ .Title }}" class="most-recent-post__baloons">
                 <div class="most-recent-post-caption">
                     <h3 class="most-recent-post-caption__title">{{ .Title }}</h3>
